@@ -14,7 +14,7 @@ namespace OOP_Recap_104
             Console.WriteLine(user.add(1, 2));
 
             User<float> user2 = new User<float>();
-            Console.WriteLine(user.add(1, 2));
+            Console.WriteLine(user2.add(1, 2));
         }
     }
 
