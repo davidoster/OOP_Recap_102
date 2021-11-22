@@ -38,14 +38,22 @@ namespace OOP_Recap_104
 
         public T add(T x, T y)
         {
-            int i = (int)(object)x;
-            int j = (int)(object)y;
-            int k = i + j;
-            T returnType = (T)(object)k;
+            var returnType = 0;
+            if (x.GetType().FullName == "System.Int32") 
+            {
+                
+                Console.WriteLine(x.GetType().FullName);
+                var i = x;
+                var j = y;
+                var k = (int)(object)i + (int)(object)j; // Delegate - How?????
+                returnType = k;
 
-            MyProperty = (T)(object)i;
-            MyProperty2 = (T)(object)j;
-            return (returnType);
+                MyProperty = (T)(object)i;
+                MyProperty2 = (T)(object)j;
+            }
+            return ((T)(object)returnType);
+
+
         }
 
     }
